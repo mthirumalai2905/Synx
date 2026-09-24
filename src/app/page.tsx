@@ -75,25 +75,25 @@ export default function HomePage() {
           <p className="sub">Four tools. One network. Real Time Web is the architecture. Morph Space is how people join. Synx is how you run it.</p>
         </div>
         <div className="bento">
-          <article className="card">
+          <article className="card bios">
             <h3>Synx BIOS</h3>
             <p>The network operating system. This is not a computer’s firmware BIOS. It is the command line for the layer you own: administer services, share or transfer a data source, and see what belongs to you.</p>
             <img className="tool-mark" src="/img/bios.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
           </article>
-          <article className="card">
+          <article className="card dns">
             <h3>Synx DNS</h3>
             <p>Client DNS for the domain. Map an address to a root domain, subdomains, and Morphic services. Set data links, and change the structure when the service needs to.</p>
             <img className="tool-mark" src="/img/dns.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
           </article>
-          <article className="card">
+          <article className="card pass">
             <h3>Synx Pass</h3>
             <p>Identity, authentication, and ownership. People, services, and machines are recognized here. Access follows the owner, and it can move when ownership moves.</p>
             <img className="tool-mark" src="/img/pass.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
           </article>
-          <article className="card">
+          <article className="card trade">
             <h3>Synx Trade</h3>
             <p>Value stays with the creator. People keep ownership of what they make, and the majority of the revenue it generates. Because the source stays with its owner, data can move as a tradable commodity.</p>
             <img className="tool-mark" src="/img/trade.png?v=2" alt="" />
@@ -111,25 +111,25 @@ export default function HomePage() {
             <h3>Share a source. The network does not keep a copy.</h3>
             <span className="arrow" aria-hidden="true"></span>
           </article>
-          <article className="tile">
+          <article className="tile pass">
             <span className="kicker">Identity</span>
             <img src="/img/pass.png?v=2" alt="" />
             <h3>Synx Pass</h3>
             <p>People, services, and machines are recognized here. Access follows the owner, and it can move when ownership moves.</p>
           </article>
-          <article className="tile feature">
+          <article className="tile feature bios">
             <span className="kicker">Runtime</span>
             <h3>Synx BIOS</h3>
             <p>The command line for the layer you own. XML is the default. A Synx command can switch a live connection to JSON.</p>
             <a className="orb" href="#suite" aria-label="See the tools"></a>
           </article>
-          <article className="tile">
+          <article className="tile dns">
             <span className="kicker">Naming</span>
             <img src="/img/dns.png?v=2" alt="" />
             <h3>Synx DNS</h3>
             <p>A root domain, subdomains, and Morphic services. The structure can change when the service needs to.</p>
           </article>
-          <article className="tile">
+          <article className="tile trade">
             <span className="kicker">Value</span>
             <h3>Creators keep what they make.</h3>
             <p>Synx Trade leaves ownership, and most of the revenue, with the person who made it.</p>

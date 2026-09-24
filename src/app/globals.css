@@ -976,12 +976,12 @@ section h2 {
   right: -24px;
   width: 92%;
   height: 240px;
-  background: url("/img/honeycomb-dns.svg?v=2") right top / 230px auto no-repeat;
+  background: url("/img/honeycomb-dns.svg?v=3") right top / 230px auto no-repeat;
   filter: blur(0.6px);
 }
-.plan.bios::before { background-image: url("/img/honeycomb-bios.svg?v=2"); }
-.plan.pass::before { background-image: url("/img/honeycomb-pass.svg?v=2"); }
-.plan.trade::before { background-image: url("/img/honeycomb-trade.svg?v=2"); }
+.plan.bios::before { background-image: url("/img/honeycomb-bios.svg?v=3"); }
+.plan.pass::before { background-image: url("/img/honeycomb-pass.svg?v=3"); }
+.plan.trade::before { background-image: url("/img/honeycomb-trade.svg?v=3"); }
 .plan::after {
   inset: 0;
   border-radius: inherit;
@@ -1627,4 +1627,141 @@ section h2 {
 }
 @media (prefers-reduced-motion: reduce) {
   .who-globe img { animation: none; }
+}
+
+.bios { --tool: #683E04; --tool-mid: #c4893a; --tool-soft: #f0dcc4; --tool-deep: #3a2202; }
+.dns { --tool: #103F30; --tool-mid: #3d9a80; --tool-soft: #c9ebe1; --tool-deep: #06241c; }
+.pass { --tool: #4B0F2B; --tool-mid: #c45b86; --tool-soft: #f3c9d8; --tool-deep: #2a0818; }
+.trade { --tool: #2116C4; --tool-mid: #6d66ee; --tool-soft: #cfcbff; --tool-deep: #120c6e; }
+
+.bento .card.bios:hover,
+.bento .card.dns:hover,
+.bento .card.pass:hover,
+.bento .card.trade:hover { border-color: color-mix(in srgb, var(--tool-mid) 70%, white); }
+.bento .card.bios::after,
+.bento .card.dns::after,
+.bento .card.pass::after,
+.bento .card.trade::after {
+  background: radial-gradient(280px circle at var(--mx) var(--my), color-mix(in srgb, var(--tool-soft) 88%, white), transparent 42%);
+}
+.bento .card.bios .tool-mark,
+.bento .card.dns .tool-mark,
+.bento .card.pass .tool-mark,
+.bento .card.trade .tool-mark {
+  box-shadow: 0 0 48px 12px color-mix(in srgb, var(--tool-mid) 55%, transparent);
+}
+.bento .card.bios:hover .tool-mark,
+.bento .card.dns:hover .tool-mark,
+.bento .card.pass:hover .tool-mark,
+.bento .card.trade:hover .tool-mark {
+  box-shadow: 0 0 64px 18px color-mix(in srgb, var(--tool-mid) 72%, transparent);
+}
+.bento .card.bios .glow,
+.bento .card.dns .glow,
+.bento .card.pass .glow,
+.bento .card.trade .glow {
+  background: radial-gradient(ellipse at center bottom, var(--tool-mid), var(--tool) 48%, transparent 72%);
+}
+
+.tile.pass,
+.tile.dns,
+.tile.trade {
+  background:
+    radial-gradient(90% 70% at 100% 0%, color-mix(in srgb, var(--tool-mid) 34%, transparent), transparent 58%),
+    #121614;
+}
+.tile.pass .kicker,
+.tile.dns .kicker,
+.tile.trade .kicker { color: var(--tool-soft); }
+.tile.pass img,
+.tile.dns img {
+  box-shadow: 0 0 22px color-mix(in srgb, var(--tool-mid) 45%, transparent);
+}
+.tile.feature.bios {
+  background:
+    radial-gradient(120px 80px at 78% 22%, rgba(255, 255, 255, 0.55), transparent 70%),
+    linear-gradient(165deg, var(--tool-soft) 0%, var(--tool-mid) 42%, var(--tool) 100%);
+  color: #2a1604;
+  border-color: transparent;
+}
+.tile.feature.bios .kicker { color: rgba(42, 22, 4, 0.55); }
+.tile.feature.bios p { color: rgba(42, 22, 4, 0.75); }
+.tile.feature.bios .orb { color: #2a1604; }
+
+.plan.dns,
+.plan.bios,
+.plan.pass,
+.plan.trade {
+  background:
+    radial-gradient(90% 46% at 100% 0%, color-mix(in srgb, var(--tool-mid) 28%, transparent), transparent 58%),
+    linear-gradient(180deg, #101614 0%, #070a09 100%);
+  border-color: color-mix(in srgb, var(--tool-mid) 35%, transparent);
+}
+.plan.dns::after,
+.plan.bios::after,
+.plan.pass::after,
+.plan.trade::after {
+  background:
+    radial-gradient(ellipse 70% 42% at 88% 0%, color-mix(in srgb, var(--tool-soft) 55%, transparent), transparent 62%),
+    radial-gradient(ellipse 90% 28% at 50% 108%, color-mix(in srgb, var(--tool) 70%, transparent), transparent 70%);
+}
+.plan.dns:hover,
+.plan.dns:focus-within,
+.plan.bios:hover,
+.plan.bios:focus-within,
+.plan.pass:hover,
+.plan.pass:focus-within,
+.plan.trade:hover,
+.plan.trade:focus-within {
+  border-color: color-mix(in srgb, var(--tool-mid) 80%, white);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--tool-mid) 40%, transparent),
+    0 0 42px color-mix(in srgb, var(--tool) 45%, transparent),
+    0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.plan.dns:hover .btn,
+.plan.dns:focus-within .btn,
+.plan.bios:hover .btn,
+.plan.bios:focus-within .btn,
+.plan.pass:hover .btn,
+.plan.pass:focus-within .btn,
+.plan.trade:hover .btn,
+.plan.trade:focus-within .btn {
+  background: linear-gradient(180deg, var(--tool-soft) 0%, var(--tool-mid) 46%, var(--tool) 100%);
+  color: #140c08;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 10px 28px color-mix(in srgb, var(--tool-mid) 40%, transparent);
+}
+.plan.dns img,
+.plan.bios img,
+.plan.pass img,
+.plan.trade img {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--tool-soft) 70%, transparent), 0 0 22px color-mix(in srgb, var(--tool-mid) 55%, transparent);
+}
+.plan.dns h3,
+.plan.bios h3,
+.plan.pass h3,
+.plan.trade h3 {
+  background: linear-gradient(90deg, #fff 8%, var(--tool-soft) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.plan.dns .tag,
+.plan.bios .tag,
+.plan.pass .tag,
+.plan.trade .tag { color: var(--tool-soft); }
+.plan.dns .tag::before,
+.plan.bios .tag::before,
+.plan.pass .tag::before,
+.plan.trade .tag::before {
+  background: var(--tool-mid);
+  box-shadow: 0 0 8px var(--tool-mid);
+}
+.plan.dns .mark,
+.plan.bios .mark,
+.plan.pass .mark,
+.plan.trade .mark {
+  color: var(--tool-soft);
+  background: color-mix(in srgb, var(--tool) 28%, transparent);
+  border-color: color-mix(in srgb, var(--tool-mid) 40%, transparent);
 }
