@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing — Synx tools</title>
+  <meta name="description" content="Creators keep ownership of what they make, and most of the revenue it generates.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="styles.css?v=92">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Synx tools">
+        <img class="wordmark" src="img/wordmark.png" alt="Synx Tools">
+      </a>
+      <nav class="nav-links" id="menu">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#process">How it works</a>
+        <a href="index.html#layers">Layers</a>
+        <a href="index.html#questions">Questions</a>
+        <a href="who.html">Who we are</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost btn-sm" href="index.html#connected">Connections</a>
+        <a class="btn btn-primary btn-sm" href="index.html#suite">See the tools</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="price-hero">
+      <div class="wrap">
+        <h1>Pricing</h1>
+        <p class="lede">Creators keep ownership of what they make, and most of the revenue it generates. The same tools, a different layer for each role.</p>
+        <div class="price-grid">
+          <article class="price-card">
+            <h2>Consumer</h2>
+            <p class="for">The data layer</p>
+            <p class="amount">Yours<span>Not the application around it</span></p>
+            <a class="btn btn-ghost" href="index.html#roles">See the role</a>
+            <ul>
+              <li><i></i><span>You control the data from a source you own.</span></li>
+              <li><i></i><span>The network does not keep a stored copy.</span></li>
+              <li><i></i><span>Ownership of a source can be transferred.</span></li>
+              <li><i></i><span>The next holder receives the data.</span></li>
+              <li><i></i><span>The service can keep running its own logic.</span></li>
+            </ul>
+          </article>
+          <article class="price-card featured">
+            <h2>Domain owner</h2>
+            <p class="for">The root domain</p>
+            <p class="amount">Most<span>of the revenue stays with the creator</span></p>
+            <a class="btn btn-primary" href="index.html#suite">See the tools</a>
+            <ul>
+              <li><i></i><span>You name the domain and shape the services.</span></li>
+              <li><i></i><span>Synx BIOS operates the layer you own.</span></li>
+              <li><i></i><span>Synx Pass secures identity and ownership.</span></li>
+              <li><i></i><span>Synx Trade keeps value with the creator.</span></li>
+              <li><i></i><span>You do not take the consumer’s data layer.</span></li>
+            </ul>
+          </article>
+          <article class="price-card">
+            <h2>Developer</h2>
+            <p class="for">The service</p>
+            <p class="amount">Linked<span>instead of a private API</span></p>
+            <a class="btn btn-ghost" href="index.html#process">How it works</a>
+            <ul>
+              <li><i></i><span>Build the service on the domain.</span></li>
+              <li><i></i><span>Link to a neighbor instead of a new interface.</span></li>
+              <li><i></i><span>XML is the default. JSON can be switched live.</span></li>
+              <li><i></i><span>A change in one layer does not rewrite the rest.</span></li>
+              <li><i></i><span>Creators still own what they make.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="img/symbol.png" alt="">
+            <span>Synx</span>
+          </div>
+          <p>Helping domain owners run live services, with each layer kept by the people who own it.</p>
+          <p class="footer-note">Configure, secure, and operate.</p>
+          <a class="btn btn-primary btn-sm" href="index.html#suite">See the tools</a>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h4>Menu</h4>
+            <a href="index.html#tools">Tools</a>
+            <a href="index.html#process">How it works</a>
+            <a href="index.html#layers">Layers</a>
+            <a href="index.html#questions">Questions</a>
+            <a href="who.html">Who we are</a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+          <div>
+            <h4>Explore Synx</h4>
+            <a href="index.html#suite">Synx BIOS</a>
+            <a href="index.html#suite">Synx DNS</a>
+            <a href="index.html#suite">Synx Pass</a>
+            <a href="index.html#suite">Synx Trade</a>
+            <a href="https://realtimeweb.org" target="_blank" rel="noreferrer">Real Time Web</a>
+            <a href="https://morph.space" target="_blank" rel="noreferrer">Morph Space</a>
+          </div>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© 2026 Synx tools</span>
+      </div>
+    </div>
+    <p class="footer-type">Synx</p>
+  </footer>
+
+  <script>
+    const nav = document.getElementById("nav");
+    const btn = document.getElementById("menuBtn");
+    btn.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.getElementById("menu").addEventListener("click", () => nav.classList.remove("open"));
+  </script>
+</body>
+</html>
