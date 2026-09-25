@@ -1950,18 +1950,20 @@ section h2 {
   .faq-intro { position: static; }
   .hero { padding-top: 112px; }
   .eyebrow {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     width: auto;
     max-width: 100%;
     margin: 0 auto 22px;
     padding: 8px 14px;
-    text-align: center;
     border-radius: 999px;
     box-sizing: border-box;
   }
-  .dot { vertical-align: middle; }
   .eyebrow-label {
-    display: inline;
+    flex: 1 1 auto;
+    min-width: 0;
     text-align: center;
     white-space: normal;
   }
