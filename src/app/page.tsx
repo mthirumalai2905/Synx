@@ -167,7 +167,7 @@ export default function HomePage() {
         <div className="bento">
           <article className="card bios">
             <h3>Synx BIOS</h3>
-            <p>The network operating system. This is not a computer's firmware BIOS. It is the command line for the layer you own: administer services, share or transfer a data source, and see what belongs to you.</p>
+            <p>The network operating system. This is not a computer&apos;s firmware BIOS. It is the command line for the layer you own: administer services, share or transfer a data source, and see what belongs to you.</p>
             <img className="tool-mark" src="/img/bios.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
           </article>
@@ -408,7 +408,7 @@ export default function HomePage() {
             <img src="/img/bios.png?v=2" alt="" />
             <h3>Synx BIOS</h3>
             <div className="tag">Runtime</div>
-            <p className="lead">The network operating system. Not a computer's firmware.</p>
+            <p className="lead">The network operating system. Not a computer&apos;s firmware.</p>
             <ul>
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M5 5 2 8l3 3M11 5l3 3-3 3M9 3 7 13"/></svg></span><span><strong>Command line by ownership</strong><span>For the layer you own</span></span><i className="go"></i></li>
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><circle cx="6" cy="6" r="2.2"/><circle cx="11" cy="7" r="1.6"/><path d="M2.5 13c.4-2 1.8-3 3.5-3s3.1 1 3.5 3M10 10.2c.7-.4 1.5-.6 2.3-.4 1.2.3 1.8 1.2 2.2 2.6"/></svg></span><span><strong>Administer services</strong><span>See what belongs to you</span></span><i className="go"></i></li>
