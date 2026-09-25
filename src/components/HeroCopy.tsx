@@ -34,7 +34,7 @@ export function HeroCopy() {
   if (reduce) {
     return (
       <div className="wrap">
-        <div className="eyebrow"><span className="dot"></span> The operating tools for a Real Time Web domain<BetaSketch /></div>
+        <div className="eyebrow"><span className="dot"></span> <span className="eyebrow-label">The operating tools for a Real Time Web domain</span><BetaSketch /></div>
         <h1>Run it live. Keep it yours.</h1>
         <p className="lede">Synx is the tool suite for domain owners, developers, and consumers. It configures, secures, and operates the network, while each role keeps the layer that belongs to them.</p>
         <div className="hero-cta">
@@ -60,7 +60,8 @@ export function HeroCopy() {
       variants={{ show: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } } }}
     >
       <motion.div className="eyebrow" variants={rise}>
-        <span className="dot"></span> The operating tools for a Real Time Web domain
+        <span className="dot"></span>
+        <span className="eyebrow-label">The operating tools for a Real Time Web domain</span>
         <BetaSketch />
       </motion.div>
       <h1>
