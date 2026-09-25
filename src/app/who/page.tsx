@@ -53,7 +53,14 @@ export default function WhoPage() {
         </div>
       </div>
       <div className="who-globe">
-        <img src="/img/who-globe.png?v=2" alt="Dotted world map with Norway marked" />
+        <div className="who-globe-stage">
+          <img src="/img/who-globe.png?v=2" alt="Dotted world map with Norway and India marked" />
+          <span className="who-pin">
+            <span className="who-pin-mark" aria-hidden="true"></span>
+            India
+            <i aria-hidden="true"></i>
+          </span>
+        </div>
       </div>
     </section>
     </Reveal>
