@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/JsonLd";
+import { Dynamics } from "@/components/Dynamics";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import { siteDescription, siteName, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -40,6 +42,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             ],
           }}
         />
+        <SmoothScroll />
+        <Dynamics />
         {children}
       </body>
     </html>

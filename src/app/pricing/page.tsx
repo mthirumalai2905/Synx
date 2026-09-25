@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
+import { Reveal } from "@/components/Reveal";
 
 const description =
   "Creators keep ownership of what they make, and most of the revenue it generates.";
@@ -18,6 +19,7 @@ export default function PricingPage() {
     <>
       <Nav />
       <main>
+    <Reveal immediate>
     <section className="price-hero">
       <div className="wrap">
         <h1>Pricing</h1>
@@ -65,6 +67,7 @@ export default function PricingPage() {
         </div>
       </div>
     </section>
+    </Reveal>
   </main>
       <Footer />
     </>

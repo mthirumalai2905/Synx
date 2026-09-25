@@ -1,9 +1,11 @@
 ﻿import type { Metadata } from "next";
-import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
 import { SiteEffects } from "@/components/SiteEffects";
 import { JsonLd } from "@/components/JsonLd";
 import { CodePanel } from "@/components/CodePanel";
+import { HeroCopy } from "@/components/HeroCopy";
+import { Reveal } from "@/components/Reveal";
 import { faq, siteDescription } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -98,26 +100,7 @@ export default function HomePage() {
       <SiteEffects />
       <main id="top">
     <section className="hero">
-      <div className="wrap">
-        <div className="eyebrow"><span className="dot"></span> The operating tools for a Real Time Web domain</div>
-        <h1>Run it live. Keep it yours.</h1>
-        <p className="lede">Synx is the tool suite for domain owners, developers, and consumers. It configures, secures, and operates the network, while each role keeps the layer that belongs to them.</p>
-        <div className="hero-cta">
-          <a className="btn btn-primary" href="#suite">See the tools</a>
-          <a className="btn btn-ghost" href="#process">How it works</a>
-        </div>
-        <div className="logo-row" id="connected">
-          <span>Connected to</span>
-          <div className="marks">
-            <a href="https://realtimeweb.org" target="_blank" rel="noreferrer">
-              <img src="/img/realtimeweb.png" alt="Real Time Web" />
-            </a>
-            <a href="https://morph.space" target="_blank" rel="noreferrer">
-              <img src="/img/morphspace.png" alt="Morph Space" />
-            </a>
-          </div>
-        </div>
-      </div>
+      <HeroCopy />
       <div className="hero-glow" aria-hidden="true">
         <svg className="hero-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
           <path fill="#22c55e" opacity="0.85">
@@ -130,6 +113,7 @@ export default function HomePage() {
       </div>
     </section>
 
+    <Reveal>
     <section className="trust" aria-label="Trusted by leading investors and builders">
       <div className="trust-frame">
         <span className="tick tr" aria-hidden="true"></span>
@@ -156,7 +140,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section id="tools">
       <div className="wrap">
         <div className="center">
@@ -192,7 +178,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section id="details">
       <div className="wrap">
         <div className="mosaic">
@@ -232,7 +220,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section id="process">
       <div className="wrap">
         <div className="center">
@@ -262,7 +252,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section id="layers">
       <div className="wrap split">
         <div className="copy">
@@ -280,7 +272,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section>
       <div className="wrap split reverse">
         <div className="copy">
@@ -298,7 +292,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section id="roles">
       <div className="wrap">
         <div className="center">
@@ -325,7 +321,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section id="call" className="code-block">
       <div className="wrap code-split">
         <div>
@@ -339,7 +337,9 @@ export default function HomePage() {
         <CodePanel />
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section className="integrate">
       <div className="wrap center">
         <h2>Call it <span>this morning</span></h2>
@@ -357,7 +357,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section className="pair">
       <div className="wrap pair-grid">
         <article className="pair-card field">
@@ -382,7 +384,9 @@ export default function HomePage() {
         </article>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section id="suite">
       <div className="wrap">
         <div className="center">
@@ -446,7 +450,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section id="questions">
       <div className="wrap faq-layout">
         <div className="faq-intro">
@@ -480,7 +486,9 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section className="voices" id="voices" aria-label="How each role describes the work">
       <div className="voice-fade">
         <div className="voice-marquee">
@@ -490,6 +498,7 @@ export default function HomePage() {
         </div>
       </div>
     </section>
+    </Reveal>
   </main>
       <Footer home />
     </>

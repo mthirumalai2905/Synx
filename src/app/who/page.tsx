@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
+import { Reveal } from "@/components/Reveal";
 
 const description =
   "Paal Kristian Levang and Henrik Silverkant introduced Synx in 2008. Synaptic Technologies later became Nornir.";
@@ -17,6 +18,7 @@ export default function WhoPage() {
     <>
       <Nav />
       <main>
+    <Reveal immediate>
     <section className="who-hero">
       <div className="wrap">
         <h1>Who we <em>are</em></h1>
@@ -54,7 +56,9 @@ export default function WhoPage() {
         <img src="/img/who-globe.png?v=2" alt="Dotted world map with Norway marked" />
       </div>
     </section>
+    </Reveal>
 
+    <Reveal>
     <section className="who-team">
       <div className="wrap">
         <h2>The people who started it</h2>
@@ -170,6 +174,7 @@ export default function WhoPage() {
         </div>
       </div>
     </section>
+    </Reveal>
   </main>
       <Footer />
     </>
