@@ -14,15 +14,14 @@ export function SiteEffects() {
     };
     cards.forEach((card) => card.addEventListener("mousemove", onMove));
 
-    const questions = [...document.querySelectorAll<HTMLDetailsElement>(".faq details")];
     const onToggle = (event: Event) => {
-      const item = event.currentTarget as HTMLDetailsElement;
-      if (!item.open) return;
-      questions.forEach((other) => {
+      const item = event.target;
+      if (!(item instanceof HTMLDetailsElement) || !item.open || !item.closest(".faq")) return;
+      item.parentElement?.querySelectorAll("details").forEach((other) => {
         if (other !== item) other.open = false;
       });
     };
-    questions.forEach((item) => item.addEventListener("toggle", onToggle));
+    document.addEventListener("toggle", onToggle, true);
 
     if (location.hash) {
       document.querySelector(location.hash)?.scrollIntoView();
@@ -30,7 +29,7 @@ export function SiteEffects() {
 
     return () => {
       cards.forEach((card) => card.removeEventListener("mousemove", onMove));
-      questions.forEach((item) => item.removeEventListener("toggle", onToggle));
+      document.removeEventListener("toggle", onToggle, true);
     };
   }, []);
 

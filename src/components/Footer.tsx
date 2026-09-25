@@ -55,14 +55,16 @@ export function Footer({ home = false }: { home?: boolean }) {
               <a href={section("#layers")}>Layers</a>
               <a href={section("#questions")}>Questions</a>
               <Link href="/who">Who we are</Link>
-              <Link href="/pricing">Pricing</Link>
+              <a href="https://morph.space" target="_blank" rel="noreferrer">
+                Morph Space
+              </a>
             </div>
             <div>
               <h4>Explore Synx</h4>
-              <a href={section("#suite")}>Synx BIOS</a>
-              <a href={section("#suite")}>Synx DNS</a>
-              <a href={section("#suite")}>Synx Pass</a>
-              <a href={section("#suite")}>Synx Trade</a>
+              <a href="/bios">Synx BIOS</a>
+              <a href="/dns">Synx DNS</a>
+              <a href="/pass">Synx Pass</a>
+              <a href="/trade">Synx Trade</a>
               <a href="https://realtimeweb.org" target="_blank" rel="noreferrer">
                 Real Time Web
               </a>

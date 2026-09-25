@@ -5,8 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const links = [
-  { hash: "#tools", label: "Tools" },
-  { hash: "#process", label: "How it works" },
   { hash: "#layers", label: "Layers" },
   { hash: "#questions", label: "Questions" },
 ];
@@ -34,6 +32,18 @@ export function Nav() {
           <img className="wordmark" src="/img/wordmark.png" alt="Synx Tools" />
         </Link>
         <nav className="nav-links" id="menu" onClick={() => setOpen(false)}>
+          <div className="nav-drop">
+            <a href={section("#suite")}>Tools</a>
+            <div className="nav-drop-menu">
+              <a className="bios" href="/bios">Synx BIOS</a>
+              <a className="dns" href="/dns">Synx DNS</a>
+              <a className="pass" href="/pass">Synx Pass</a>
+              <a className="trade" href="/trade">Synx Trade</a>
+            </div>
+          </div>
+          <a href="https://realtimeweb.org" target="_blank" rel="noreferrer">
+            Real Time Web
+          </a>
           {links.map((item) => (
             <a key={item.hash} href={section(item.hash)}>
               {item.label}
@@ -42,9 +52,9 @@ export function Nav() {
           <Link href="/who" aria-current={path === "/who" ? "page" : undefined}>
             Who we are
           </Link>
-          <Link href="/pricing" aria-current={path === "/pricing" ? "page" : undefined}>
-            Pricing
-          </Link>
+          <a href="https://morph.space" target="_blank" rel="noreferrer">
+            Morph Space
+          </a>
         </nav>
         <div className="nav-actions">
           <a className="btn btn-ghost btn-sm" href={section("#connected")}>

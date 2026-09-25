@@ -151,30 +151,30 @@ export default function HomePage() {
           <p className="sub">Four tools. One network. Real Time Web is the architecture. Morph Space is how people join. Synx is how you run it.</p>
         </div>
         <div className="bento">
-          <article className="card bios">
+          <a className="card bios" href="/bios">
             <h3>Synx BIOS</h3>
             <p>The network operating system. This is not a computer&apos;s firmware BIOS. It is the command line for the layer you own: administer services, share or transfer a data source, and see what belongs to you.</p>
             <img className="tool-mark" src="/img/bios.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
-          </article>
-          <article className="card dns">
+          </a>
+          <a className="card dns" href="/dns">
             <h3>Synx DNS</h3>
             <p>Client DNS for the domain. Map an address to a root domain, subdomains, and Morphic services. Set data links, and change the structure when the service needs to.</p>
             <img className="tool-mark" src="/img/dns.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
-          </article>
-          <article className="card pass">
+          </a>
+          <a className="card pass" href="/pass">
             <h3>Synx Pass</h3>
             <p>Identity, authentication, and ownership. People, services, and machines are recognized here. Access follows the owner, and it can move when ownership moves.</p>
             <img className="tool-mark" src="/img/pass.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
-          </article>
-          <article className="card trade">
+          </a>
+          <a className="card trade" href="/trade">
             <h3>Synx Trade</h3>
             <p>Value stays with the creator. People keep ownership of what they make, and the majority of the revenue it generates. Because the source stays with its owner, data can move as a tradable commodity.</p>
             <img className="tool-mark" src="/img/trade.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -189,30 +189,30 @@ export default function HomePage() {
             <h3>Share a source. The network does not keep a copy.</h3>
             <span className="arrow" aria-hidden="true"></span>
           </article>
-          <article className="tile pass">
+          <a className="tile pass" href="/pass">
             <span className="kicker">Identity</span>
             <img src="/img/pass.png?v=2" alt="" />
             <h3>Synx Pass</h3>
             <p>People, services, and machines are recognized here. Access follows the owner, and it can move when ownership moves.</p>
-          </article>
-          <article className="tile feature bios">
+          </a>
+          <a className="tile feature bios" href="/bios">
             <span className="kicker">Runtime</span>
             <h3>Synx BIOS</h3>
             <p>The command line for the layer you own. XML is the default. A Synx command can switch a live connection to JSON.</p>
-            <a className="orb" href="#suite" aria-label="See the tools"></a>
-          </article>
-          <article className="tile dns">
+            <span className="orb" aria-hidden="true"></span>
+          </a>
+          <a className="tile dns" href="/dns">
             <span className="kicker">Naming</span>
             <img src="/img/dns.png?v=2" alt="" />
             <h3>Synx DNS</h3>
             <p>A root domain, subdomains, and Morphic services. The structure can change when the service needs to.</p>
-          </article>
-          <article className="tile trade">
+          </a>
+          <a className="tile trade" href="/trade">
             <span className="kicker">Value</span>
             <h3>Creators keep what they make.</h3>
             <p>Synx Trade leaves ownership, and most of the revenue, with the person who made it.</p>
             <span className="arrow" aria-hidden="true"></span>
-          </article>
+          </a>
           <article className="tile solid">
             <h3>Four tools. One network.</h3>
             <a className="arrow" href="#suite" aria-label="See the tools"></a>
@@ -366,20 +366,20 @@ export default function HomePage() {
           <h2>One suite.</h2>
           <p>DNS names the domain. BIOS operates it. Pass secures who is connected. Trade keeps the value. The same network, whichever layer you own.</p>
           <div className="pair-marks">
-            <span className="dns"><img src="/img/dns.png" alt="Synx DNS" /></span>
-            <span className="bios"><img src="/img/bios.png" alt="Synx BIOS" /></span>
-            <span className="pass"><img src="/img/pass.png" alt="Synx Pass" /></span>
-            <span className="trade"><img src="/img/trade.png" alt="Synx Trade" /></span>
+            <a className="dns" href="/dns"><img src="/img/dns.png" alt="Synx DNS" /></a>
+            <a className="bios" href="/bios"><img src="/img/bios.png" alt="Synx BIOS" /></a>
+            <a className="pass" href="/pass"><img src="/img/pass.png" alt="Synx Pass" /></a>
+            <a className="trade" href="/trade"><img src="/img/trade.png" alt="Synx Trade" /></a>
           </div>
         </article>
         <article className="pair-card">
           <h2>Four tools. One network.</h2>
           <p>Use the tool that matches the layer you own. The suite is how a domain is named, secured, operated, and valued.</p>
           <ul>
-            <li><strong>Synx DNS</strong><span>Names the domain, the services, and the links.</span></li>
-            <li><strong>Synx BIOS</strong><span>Operates the layer you own.</span></li>
-            <li><strong>Synx Pass</strong><span>Secures who is connected, and what they own.</span></li>
-            <li><strong>Synx Trade</strong><span>Keeps value with the creator.</span></li>
+            <li><a href="/dns"><strong>Synx DNS</strong><span>Names the domain, the services, and the links.</span></a></li>
+            <li><a href="/bios"><strong>Synx BIOS</strong><span>Operates the layer you own.</span></a></li>
+            <li><a href="/pass"><strong>Synx Pass</strong><span>Secures who is connected, and what they own.</span></a></li>
+            <li><a href="/trade"><strong>Synx Trade</strong><span>Keeps value with the creator.</span></a></li>
           </ul>
         </article>
       </div>
@@ -395,7 +395,7 @@ export default function HomePage() {
           <p className="sub">Use the tool that matches the layer you own. The suite is how a domain is named, secured, operated, and valued.</p>
         </div>
         <div className="suite">
-          <article className="card plan dns">
+          <a className="card plan dns" id="dns" href="/dns">
             <img src="/img/dns.png?v=2" alt="" />
             <h3>Synx DNS</h3>
             <div className="tag">Naming</div>
@@ -406,9 +406,9 @@ export default function HomePage() {
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M6.5 9.5 4 12a2.2 2.2 0 0 1-3-3l2.5-2.5M9.5 6.5 12 4a2.2 2.2 0 0 1 3 3L12.5 9.5M6 10l4-4"/></svg></span><span><strong>Data links</strong><span>Set the links the service uses</span></span><i className="go"></i></li>
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M2 4h12M2 8h8M2 12h10"/></svg></span><span><strong>Structure you can change</strong><span>When the service needs to</span></span><i className="go"></i></li>
             </ul>
-            <a className="btn btn-ghost" href="#tools">About DNS</a>
-          </article>
-          <article className="card plan bios">
+            <span className="btn btn-ghost">About DNS</span>
+          </a>
+          <a className="card plan bios" id="bios" href="/bios">
             <img src="/img/bios.png?v=2" alt="" />
             <h3>Synx BIOS</h3>
             <div className="tag">Runtime</div>
@@ -419,9 +419,9 @@ export default function HomePage() {
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><ellipse cx="8" cy="4" rx="4.5" ry="1.8"/><path d="M3.5 4v3c0 1 2 1.8 4.5 1.8s4.5-.8 4.5-1.8V4M3.5 7.2V11c0 1 2 1.8 4.5 1.8s4.5-.8 4.5-1.8V7.2"/></svg></span><span><strong>Transfer a data source</strong><span>Hand it to the next owner</span></span><i className="go"></i></li>
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M13 8a5 5 0 1 1-1.2-3.2"/><path d="M13 2.5V5h-2.5"/></svg></span><span><strong>Changes while live</strong><span>Without dropping the connection</span></span><i className="go"></i></li>
             </ul>
-            <a className="btn btn-ghost" href="#tools">About BIOS</a>
-          </article>
-          <article className="card plan pass">
+            <span className="btn btn-ghost">About BIOS</span>
+          </a>
+          <a className="card plan pass" id="pass" href="/pass">
             <img src="/img/pass.png?v=2" alt="" />
             <h3>Synx Pass</h3>
             <div className="tag">Identity</div>
@@ -432,9 +432,9 @@ export default function HomePage() {
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M8 2.2 13 4.2v4.1c0 3-2.1 4.6-5 5.5-2.9-.9-5-2.5-5-5.5V4.2L8 2.2z"/></svg></span><span><strong>Ownership control</strong><span>Access follows the owner</span></span><i className="go"></i></li>
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M2.5 8h9M9 5l3 3-3 3"/></svg></span><span><strong>Access that can move</strong><span>When ownership moves</span></span><i className="go"></i></li>
             </ul>
-            <a className="btn btn-ghost" href="#tools">About Pass</a>
-          </article>
-          <article className="card plan trade">
+            <span className="btn btn-ghost">About Pass</span>
+          </a>
+          <a className="card plan trade" id="trade" href="/trade">
             <img src="/img/trade.png?v=2" alt="" />
             <h3>Synx Trade</h3>
             <div className="tag">Value</div>
@@ -445,8 +445,8 @@ export default function HomePage() {
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M3 6.2 8 3.5l5 2.7v5.2L8 14.1 3 11.4V6.2z"/></svg></span><span><strong>Data as a commodity</strong><span>Because the source stays put</span></span><i className="go"></i></li>
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><rect x="3.2" y="7" width="9.6" height="6.2" rx="1.2"/><path d="M5.5 7V5.2a2.5 2.5 0 0 1 5 0V7"/></svg></span><span><strong>Source is not copied away</strong><span>It moves with its owner</span></span><i className="go"></i></li>
             </ul>
-            <a className="btn btn-ghost" href="#tools">About Trade</a>
-          </article>
+            <span className="btn btn-ghost">Coming soon</span>
+          </a>
         </div>
       </div>
     </section>
@@ -482,6 +482,10 @@ export default function HomePage() {
           <details>
             <summary>Who can change what?</summary>
             <div className="faq-a"><p>A consumer can control the data layer, not the application. A service provider configures the application layer, not the lower stack. Ownership of a source can be transferred, and the next holder receives the data.</p></div>
+          </details>
+          <details>
+            <summary>What does Synx Trade leave with the creator?</summary>
+            <div className="faq-a"><p>Creators keep ownership of what they make, and most of the revenue it generates. Because the source stays with its owner, data can move as a tradable commodity.</p></div>
           </details>
         </div>
       </div>

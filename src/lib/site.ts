@@ -30,4 +30,8 @@ export const faq = [
     q: "Who can change what?",
     a: "A consumer can control the data layer, not the application. A service provider configures the application layer, not the lower stack. Ownership of a source can be transferred, and the next holder receives the data.",
   },
+  {
+    q: "What does Synx Trade leave with the creator?",
+    a: "Creators keep ownership of what they make, and most of the revenue it generates. Because the source stays with its owner, data can move as a tradable commodity.",
+  },
 ];
