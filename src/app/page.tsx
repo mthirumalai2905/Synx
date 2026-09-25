@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { SiteEffects } from "@/components/SiteEffects";
 import { JsonLd } from "@/components/JsonLd";
+import { CodePanel } from "@/components/CodePanel";
 import { faq, siteDescription } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -16,6 +17,68 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+const voiceColumns: { avatar: string; role: string; text: string }[][] = [
+  [
+    { avatar: "/img/avatar-1.png", role: "Domain owner", text: "The name is the address. Services and links sit under it, and the owner decides what they point to." },
+    { avatar: "/img/avatar-2.png", role: "Consumer", text: "Who is connected, and what they own, follows the person. Access moves when ownership moves. I can see the sources that belong to me without managing the application layer." },
+    { avatar: "/img/avatar-3.png", role: "Developer", text: "XML is the default. A live connection can switch to JSON without dropping." },
+  ],
+  [
+    { avatar: "/img/avatar-4.png", role: "Developer", text: "We shaped the service and showed it live. The link was the integration. There was no private API to finish first, and the people on the connection saw the change as it happened." },
+    { avatar: "/img/avatar-5.png", role: "Creator", text: "The source is not copied away. It moves with its owner." },
+    { avatar: "/img/avatar-6.png", role: "Domain owner", text: "There is no stored middle copy. If I want a record, I keep it, and only for data that is mine." },
+  ],
+  [
+    { avatar: "/img/avatar-7.png", role: "Creator", text: "Ownership stays with the work. Most of the revenue stays with the person who made it." },
+    { avatar: "/img/avatar-8.png", role: "Consumer", text: "I can control the data layer. The application stays with the provider." },
+    { avatar: "/img/avatar-2.png", role: "Domain owner", text: "With the right ownership I can administer services and see the sources that belong to me. Subdomains, links, and what the service offers are changed from that same place." },
+  ],
+  [
+    { avatar: "/img/avatar-3.png", role: "Consumer", text: "The network does not persist the stream." },
+    { avatar: "/img/avatar-5.png", role: "Creator", text: "Data can be a commodity because the source stays put. It is not duplicated away from the owner." },
+    { avatar: "/img/avatar-1.png", role: "Developer", text: "A service provider configures the application layer, not the lower stack." },
+  ],
+  [
+    { avatar: "/img/avatar-6.png", role: "Domain owner", text: "The domain, the services, and the links stay named by the person who owns them." },
+    { avatar: "/img/avatar-4.png", role: "Developer", text: "The structure can change while the connection stays alive. Ownership, links, and the shape of the service are updated at runtime, and the people already connected do not get dropped." },
+    { avatar: "/img/avatar-8.png", role: "Creator", text: "Creators keep ownership, and most of what the work generates." },
+  ],
+  [
+    { avatar: "/img/avatar-7.png", role: "Consumer", text: "Access follows the owner. It can move when ownership moves." },
+    { avatar: "/img/avatar-1.png", role: "Domain owner", text: "A root domain on a public address is the door into the tools. From there I name services and links, and I can see which sources belong to the domain I run." },
+    { avatar: "/img/avatar-3.png", role: "Developer", text: "Subdomains, services, and links are shaped without a stored middle copy." },
+  ],
+];
+
+function VoiceTrack({ hidden = false }: { hidden?: boolean }) {
+  return (
+    <div className="voice-track" aria-hidden={hidden || undefined}>
+      {voiceColumns.map((column, index) => (
+        <div className="voice-col" key={index}>
+          {column.map((item) => (
+            <article className="tweet" key={item.avatar + item.text}>
+              <header>
+                <img src={item.avatar} alt="" />
+                <strong>{item.role}</strong>
+                <XMark />
+              </header>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function XMark() {
+  return (
+    <svg className="xmark" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <path fill="currentColor" d="M8.1 7.1 12.4 2h-1.2L7.6 6.3 4.5 2H1.2l4.5 6.4L1.4 12h1.2l3.8-4.5L9.6 12h3.3L8.1 7.1Zm-1.3 1.6-.4-.6L2.8 2.7h1.5l3 4.3.4.6 3.6 5.1H9.8L6.8 8.7Z" />
+    </svg>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -67,6 +130,33 @@ export default function HomePage() {
       </div>
     </section>
 
+    <section className="trust" aria-label="Trusted by leading investors and builders">
+      <div className="trust-frame">
+        <span className="tick tr" aria-hidden="true"></span>
+        <span className="tick bl" aria-hidden="true"></span>
+        <p>Trusted by leading investors and builders</p>
+        <div className="trust-row trust-lg">
+          <span className="trust-name"><svg viewBox="0 0 18 14" aria-hidden="true"><path d="M1 1h16M1 7h16M1 13h16" /></svg>Founders Fund</span>
+          <span className="trust-name"><svg className="solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 1h4v14H1zM6 1h4v14H6zM11 1h4v14h-4z" /></svg>Pantera</span>
+        </div>
+        <div className="trust-row trust-md">
+          <span className="trust-name"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 13 8 3l6 10M5 13h6" /></svg>Archetype</span>
+          <span className="trust-name">DCG</span>
+          <span className="trust-name"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h6l2 2v10H4zM8 2v4h4" /></svg>No Limit Holdings</span>
+          <span className="trust-name">Reforge</span>
+          <span className="trust-name">Amber</span>
+        </div>
+        <div className="trust-row trust-sm">
+          <span className="trust-name plain">Ethena</span>
+          <span className="trust-name plain">Sershokunin</span>
+          <span className="trust-name plain">Hermeneutic Investments</span>
+          <span className="trust-name">Solana Foundation</span>
+          <span className="trust-name">HRT</span>
+          <span className="trust-name plain">dao5</span>
+        </div>
+      </div>
+    </section>
+
     <section id="tools">
       <div className="wrap">
         <div className="center">
@@ -77,7 +167,7 @@ export default function HomePage() {
         <div className="bento">
           <article className="card bios">
             <h3>Synx BIOS</h3>
-            <p>The network operating system. This is not a computer’s firmware BIOS. It is the command line for the layer you own: administer services, share or transfer a data source, and see what belongs to you.</p>
+            <p>The network operating system. This is not a computer's firmware BIOS. It is the command line for the layer you own: administer services, share or transfer a data source, and see what belongs to you.</p>
             <img className="tool-mark" src="/img/bios.png?v=2" alt="" />
             <div className="glow" aria-hidden="true"></div>
           </article>
@@ -152,19 +242,19 @@ export default function HomePage() {
         </div>
         <div className="steps">
           <article className="card">
-            <img className="stage-art" src="/img/step-domain.png?v=1" alt="" />
+            <img className="stage-art" src="/img/step-domain.png?v=2" alt="" />
             <div className="step-no">01</div>
             <h3>Establish the domain</h3>
             <p>Set up a root domain on a machine with a public address. That is the door into the Synx tools.</p>
           </article>
           <article className="card">
-            <img className="stage-art" src="/img/step-services.png?v=1" alt="" />
+            <img className="stage-art" src="/img/step-services.png?v=2" alt="" />
             <div className="step-no">02</div>
             <h3>Shape the services</h3>
             <p>With Synx DNS, create subdomains and Morphic services, add links, and describe what the service offers.</p>
           </article>
           <article className="card">
-            <img className="stage-art" src="/img/step-runtime.png?v=1" alt="" />
+            <img className="stage-art" src="/img/step-runtime.png?v=2" alt="" />
             <div className="step-no">03</div>
             <h3>Operate at runtime</h3>
             <p>Synx Pass checks who is connected. Synx BIOS changes ownership, links, and structure while the connection stays alive.</p>
@@ -225,7 +315,7 @@ export default function HomePage() {
           <article className="card role">
             <div className="step-no">Domain owners</div>
             <p className="quote">The root domain, the services, the application layer.</p>
-            <p>You configure the namespace and the logic. You do not take the consumer’s data layer with you.</p>
+            <p>You configure the namespace and the logic. You do not take the consumerâ€™s data layer with you.</p>
           </article>
           <article className="card role">
             <div className="step-no">Consumers</div>
@@ -233,6 +323,63 @@ export default function HomePage() {
             <p>Share a source, transfer it when a device changes hands, or keep it. The service can still run its logic.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section id="call" className="code-block">
+      <div className="wrap code-split">
+        <div>
+          <h2>Send a live Hello World.</h2>
+          <p>Open one connection to listen, and another to send. The first side receives the message while the link stays up.</p>
+          <div className="hero-cta">
+            <a className="btn btn-primary" href="#suite">See the tools</a>
+            <a className="btn btn-ghost" href="#process">How it works</a>
+          </div>
+        </div>
+        <CodePanel />
+      </div>
+    </section>
+
+    <section className="integrate">
+      <div className="wrap center">
+        <h2>Call it <span>this morning</span></h2>
+        <p className="sub">Clients speak HTTP, HTTPS, or websocket. XML is the default. A live connection can switch to JSON without dropping.</p>
+        <div className="sdk-row">
+          <span><i>CLI</i>curl</span>
+          <span><i>HTTP</i>HTTP</span>
+          <span><i>HTTPS</i>HTTPS</span>
+          <span><i>WS</i>WebSocket</span>
+          <span><i>XML</i>XML</span>
+          <span><i>JSON</i>JSON</span>
+        </div>
+        <div className="term-stage">
+          <CodePanel />
+        </div>
+      </div>
+    </section>
+
+    <section className="pair">
+      <div className="wrap pair-grid">
+        <article className="pair-card field">
+          <h2>One suite.</h2>
+          <p>DNS names the domain. BIOS operates it. Pass secures who is connected. Trade keeps the value. The same network, whichever layer you own.</p>
+          <div className="pair-marks">
+            <span className="dns"><img src="/img/dns.png" alt="Synx DNS" /></span>
+            <span className="bios"><img src="/img/bios.png" alt="Synx BIOS" /></span>
+            <span className="pass"><img src="/img/pass.png" alt="Synx Pass" /></span>
+            <span className="trade"><img src="/img/trade.png" alt="Synx Trade" /></span>
+          </div>
+        </article>
+        <article className="pair-card">
+          <h2>Four tools. One network.</h2>
+          <p>Use the tool that matches the layer you own. The suite is how a domain is named, secured, operated, and valued.</p>
+          <ul>
+            <li><strong>Synx DNS</strong><span>Names the domain, the services, and the links.</span></li>
+            <li><strong>Synx BIOS</strong><span>Operates the layer you own.</span></li>
+            <li><strong>Synx Pass</strong><span>Secures who is connected, and what they own.</span></li>
+            <li><strong>Synx Trade</strong><span>Keeps value with the creator.</span></li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -261,7 +408,7 @@ export default function HomePage() {
             <img src="/img/bios.png?v=2" alt="" />
             <h3>Synx BIOS</h3>
             <div className="tag">Runtime</div>
-            <p className="lead">The network operating system. Not a computer’s firmware.</p>
+            <p className="lead">The network operating system. Not a computer's firmware.</p>
             <ul>
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M5 5 2 8l3 3M11 5l3 3-3 3M9 3 7 13"/></svg></span><span><strong>Command line by ownership</strong><span>For the layer you own</span></span><i className="go"></i></li>
               <li><span className="mark" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><circle cx="6" cy="6" r="2.2"/><circle cx="11" cy="7" r="1.6"/><path d="M2.5 13c.4-2 1.8-3 3.5-3s3.1 1 3.5 3M10 10.2c.7-.4 1.5-.6 2.3-.4 1.2.3 1.8 1.2 2.2 2.6"/></svg></span><span><strong>Administer services</strong><span>See what belongs to you</span></span><i className="go"></i></li>
@@ -306,7 +453,7 @@ export default function HomePage() {
           <h2>FAQ</h2>
         </div>
         <div className="faq">
-          <details open>
+          <details>
             <summary>What are the Synx tools?</summary>
             <div className="faq-a"><p>A suite for domain owners, developers, and consumers to set up, create, and maintain a network domain and its services. Synx DNS names it. Synx BIOS operates it. Synx Pass secures identity and ownership. Synx Trade keeps value with the creator.</p></div>
           </details>
@@ -334,14 +481,12 @@ export default function HomePage() {
       </div>
     </section>
 
-    <section>
-      <div className="wrap">
-        <div className="cta-band">
-          <img className="symbol" src="/img/symbol.png" alt="" />
-          <h2>Ready to run a network you actually own?</h2>
-          <p>Start with the tool that matches your layer. The architecture is on the Real Time Web. Joining is on Morph Space.</p>
-          <a className="btn btn-primary" href="#suite">See the tools</a>
-          <div className="horizon" aria-hidden="true"></div>
+    <section className="voices" id="voices" aria-label="How each role describes the work">
+      <div className="voice-fade">
+        <div className="voice-marquee">
+          <VoiceTrack />
+          <VoiceTrack hidden />
+          <VoiceTrack hidden />
         </div>
       </div>
     </section>
